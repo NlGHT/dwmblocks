@@ -13,7 +13,7 @@
 #define SIGPLUS			SIGRTMIN
 #define SIGMINUS		SIGRTMIN
 #endif
-#define LENGTH(X)               (sizeof(X) / sizeof (X[0]))
+#define LENGTH(X)       (sizeof(X) / sizeof (X[0]))
 #define CMDLENGTH		50
 #define MIN( a, b ) ( ( a < b) ? a : b )
 #define STATUSLENGTH (LENGTH(blocks) * CMDLENGTH + 1)
@@ -70,7 +70,7 @@ void getcmd(const Block *block, char *output)
 	if (delim[0] != '\0') {
 		//only chop off newline if one is present at the end
 		i = output[i-1] == '\n' ? i-1 : i;
-		strncpy(output+i, delim, delimLen); 
+		strncpy(output+i, delim, delimLen);
 	}
 	else
 		output[i++] = '\0';
